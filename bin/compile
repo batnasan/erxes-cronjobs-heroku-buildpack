@@ -10,7 +10,7 @@ bp_dir=$(dirname $(dirname $0))
 
 proc_file="Procfile"
 
-fetch_erxes_widgets() {
+fetch_erxes_api() {
     local erxes_api_release_url="https://github.com/erxes/erxes-api.git"
     
     if [ -d $build_dir ]; then
@@ -25,7 +25,7 @@ fetch_erxes_widgets() {
     echo "web: node dist/cronJobs" > $proc_file
 }
 
-fetch_erxes_widgets
+fetch_erxes_api
 echo "-----> Downloaded erxes-api cronJobs to /app"
 
 exit 0
